@@ -16,8 +16,8 @@
     "@oclif/test": "^1",
     "eslint": "^4",
     "eslint-config-oclif": "^1",
-    "jest": "^23.0.1",
-    "jest-junit": "^5.0.0",
+    "jest": "^24.8.0",
+    "jest-junit": "^6.4.0",
     "stdout-stderr": "^0.1.9"
   },
   "engines": {
@@ -62,6 +62,6 @@
       "jest-junit"
     ],
     "testEnvironment": "node",
-    "setupTestFrameworkScriptFile": "./jest.setup.js"
+    "setupFilesAfterEnv": ["./jest.setup.js"]
   }
 }
