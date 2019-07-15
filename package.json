@@ -37,7 +37,7 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "posttest": "eslint src",
+    "posttest": "eslint src test",
     "test": "npm run unit-tests",
     "unit-tests": "jest --ci",
     "prepack": "oclif-dev manifest && oclif-dev readme",
