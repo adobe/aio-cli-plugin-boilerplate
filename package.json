@@ -1,5 +1,5 @@
 {
-  "name": "@adobe/{PLUGINNAME}",
+  "name": "@adobe/PLUGINNAME",
   "version": "0.0.0",
   "dependencies": {
     "@adobe/aio-cna-core-config": "^1.0.14",
@@ -69,6 +69,8 @@
       "jest-junit"
     ],
     "testEnvironment": "node",
-    "setupFilesAfterEnv": ["./jest.setup.js"]
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ]
   }
 }
