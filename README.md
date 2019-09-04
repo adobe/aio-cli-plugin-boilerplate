@@ -42,3 +42,11 @@ Basic working repo structure for Adobe teams to use as a starting point for thei
 # Commands
 <!-- commands -->
 <!-- commandsstop -->
+
+## Contributing
+
+Contributions are welcomed! Read the [Contributing Guide](CONTRIBUTING.md) for more information.
+
+## Licensing
+
+This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.
