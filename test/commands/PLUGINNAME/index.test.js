@@ -10,26 +10,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const {Command, flags} = require('@oclif/command')
+const IndexCommand = require('../../../src/commands/PLUGINNAME')
 
-class IndexCommand extends Command {
-  async run() {
-    //const {flags} = this.parse(IndexCommand)
-  }
-}
+test('exports', async () => {
+  expect(typeof IndexCommand).toEqual('function')
+})
 
-IndexCommand.flags = {
-  boo: flags.string({char: 'boo', description: 'you scared me'}),
-}
+describe('command tests', () => {
+  let command
 
-// this is set in package.json, see https://github.com/oclif/oclif/issues/120
-// if not set it will get the first (alphabetical) topic's help description
-IndexCommand.description = 'action, namespace'
-IndexCommand.examples = [
-  '$ aio runtime:action',
-  '$ aio runtime:namespace',
-]
+  beforeEach(() => {
+    command = new IndexCommand([])
+  })
 
-module.exports = {
-  index: IndexCommand
-}
+  test('run', async () => {
+    command.argv = []
+    await expect(command.run()).resolves.not.toThrowError()
+  })
+})

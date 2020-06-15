@@ -32,15 +32,24 @@ Basic working repo structure for Adobe teams to use as a starting point for thei
 
 ---
 
-`{PLUGINNAME}` commands for the Adobe I/O CLI
+`PLUGINNAME` commands for the Adobe I/O CLI
 
 <!-- toc -->
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
-<!-- usage -->
-<!-- usagestop -->
+```sh-session
+$ aio plugins:install -g @adobe/aio-cli-plugin-PLUGINNAME
+$ # OR
+$ aio discover -i
+$ aio PLUGINNAME --help
+```
+
 # Commands
 <!-- commands -->
+
 <!-- commandsstop -->
 
 ## Contributing
