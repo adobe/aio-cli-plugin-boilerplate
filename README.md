@@ -41,7 +41,7 @@ Basic working repo structure for Adobe teams to use as a starting point for thei
 
 # Usage
 ```sh-session
-$ aio plugins:install -g @adobe/aio-cli-plugin-PLUGINNAME
+$ aio plugins:install @adobe/aio-cli-plugin-PLUGINNAME
 $ # OR
 $ aio discover -i
 $ aio PLUGINNAME --help
