@@ -9,26 +9,27 @@
     "@oclif/errors": "^1.1.2"
   },
   "devDependencies": {
-    "@adobe/eslint-config-aio-lib-config": "^1.2.0",
+    "@adobe/eslint-config-aio-lib-config": "^1.4.0",
     "@oclif/dev-cli": "^1",
     "@oclif/plugin-help": "^2",
     "acorn": "^7",
     "chalk": "^4",
-    "eslint": "^6.2.2",
+    "eslint": "^7",
     "eslint-config-oclif": "^3.1.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jest": "^23.13.2",
-    "eslint-plugin-jsdoc": "^21.0.0",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-jsdoc": "^37.9.7",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-standard": "^4.0.1",
     "execa": "^4",
-    "jest": "^24",
+    "jest": "^27",
     "jest-haste-map": "^24.5.0",
     "jest-junit": "^6.0.0",
     "jest-resolve": "^24.5.0",
-    "stdout-stderr": "^0.1.9"
+    "stdout-stderr": "^0.1.9",
+    "typescript": "^4.6.2"
   },
   "engines": {
     "node": ">=8.0.0"
