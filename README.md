@@ -1,4 +1,5 @@
 # aio-cli-plugin-boilerplate
+
 Basic working repo structure for Adobe teams to use as a starting point for their own plugins, and available as a github template to the @adobe github org.
 
 ## How to use this template
@@ -27,6 +28,7 @@ Basic working repo structure for Adobe teams to use as a starting point for thei
 - grab the remote url 
 
 ### back in your directory ...
+
 - `git remote add origin new-repo-url`
 - `git push origin master`
 
@@ -40,6 +42,7 @@ Basic working repo structure for Adobe teams to use as a starting point for thei
 <!-- tocstop -->
 
 # Usage
+
 ```sh-session
 $ aio plugins:install @adobe/aio-cli-plugin-PLUGINNAME
 $ # OR
