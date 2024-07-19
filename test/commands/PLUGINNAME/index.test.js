@@ -25,6 +25,6 @@ describe('command tests', () => {
 
   test('run', async () => {
     command.argv = []
-    await expect(command.run()).resolves.not.toThrowError()
+    await expect(command.run()).resolves.not.toThrow()
   })
 })

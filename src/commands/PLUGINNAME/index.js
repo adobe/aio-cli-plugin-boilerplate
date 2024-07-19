@@ -11,16 +11,16 @@ governing permissions and limitations under the License.
 */
 
 const aioLogger = require('@adobe/aio-lib-core-logging')('PLUGINNAME', { provider: 'debug' })
-const { Command, Flags, CliUx } = require('@oclif/core')
+const { Command, Flags, ux } = require('@oclif/core')
 
 class IndexCommand extends Command {
   async run () {
     // const { args, flags } = await this.parse(IndexCommand)
     aioLogger.debug('this is the index command.')
 
-    CliUx.ux.log('hello world')
-    CliUx.ux.action.start('doing things')
-    CliUx.ux.action.stop()
+    ux.log('hello world')
+    ux.action.start('doing things')
+    ux.action.stop()
   }
 }
 
