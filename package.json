@@ -38,7 +38,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "main": "src/index.js",
+  "main": "src/commands/PLUGINNAME/index.js",
   "scripts": {
     "lint": "eslint src test e2e",
     "posttest": "npm run lint",
