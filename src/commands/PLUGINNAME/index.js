@@ -9,26 +9,13 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-import { Command, Flags, ux } from '@oclif/core'
-import Logger from '@adobe/aio-lib-core-logging'
-const aioLogger = Logger('PLUGINNAME', { provider: 'debug' })
+import { Command, Help } from '@oclif/core'
 
 export class IndexCommand extends Command {
   async run () {
-    // const { args, flags } = await this.parse(IndexCommand)
-    aioLogger.debug('this is the index command.')
-
-    this.log('hello world')
-    ux.action.start('doing things')
-    ux.action.stop()
+    const help = new Help(this.config)
+    await help.showHelp(['PLUGINNAME'])
   }
 }
 
-IndexCommand.flags = {
-  someflag: Flags.string({ char: 'f', description: 'this is some flag' })
-}
-
 IndexCommand.description = 'Your description here'
-IndexCommand.examples = [
-  '$ aio PLUGINNAME:some_command'
-]

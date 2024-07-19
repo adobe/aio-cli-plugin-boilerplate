@@ -55,6 +55,7 @@ $ aio PLUGINNAME --help
 <!-- commands -->
 * [`aio help [COMMAND]`](#aio-help-command)
 * [`aio PLUGINNAME`](#aio-pluginname)
+* [`aio PLUGINNAME hello [NAME]`](#aio-pluginname-hello-name)
 
 ## `aio help [COMMAND]`
 
@@ -82,16 +83,31 @@ Your description here
 
 ```
 USAGE
-  $ aio PLUGINNAME [-f <value>]
+  $ aio PLUGINNAME
+
+DESCRIPTION
+  Your description here
+```
+
+## `aio PLUGINNAME hello [NAME]`
+
+A hello world sample command.
+
+```
+USAGE
+  $ aio PLUGINNAME hello [NAME] [-f <value>]
+
+ARGUMENTS
+  NAME  name to print
 
 FLAGS
   -f, --someflag=<value>  this is some flag
 
 DESCRIPTION
-  Your description here
+  A hello world sample command.
 
 EXAMPLES
-  $ aio PLUGINNAME:some_command
+  $ aio PLUGINNAME:hello myself -f myflag
 ```
 <!-- commandsstop -->
 

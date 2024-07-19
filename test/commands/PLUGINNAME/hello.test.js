@@ -9,24 +9,33 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-import { Help } from '@oclif/core'
-import { IndexCommand } from '../../../src/commands/PLUGINNAME'
+import { HelloCommand } from '../../../src/commands/PLUGINNAME/hello'
 import { jest } from '@jest/globals'
 
 describe('command tests', () => {
   let command
 
   beforeEach(() => {
-    command = new IndexCommand([])
+    command = new HelloCommand([])
     command.config = {
-      runHook: jest.fn().mockResolvedValue({})
+      runHook: jest.fn().mockResolvedValue({}) // some oclif quirk
     }
   })
 
-  test('run', async () => {
+  test('hello', async () => {
+    const spy = jest.spyOn(command, 'log').mockReturnValue(true)
+
     command.argv = []
-    const spy = jest.spyOn(Help.prototype, 'showHelp').mockReturnValue(true)
+    command.flags = {}
     await expect(command.run()).resolves.not.toThrow()
-    expect(spy).toHaveBeenCalledWith(['PLUGINNAME'])
+    expect(spy).toHaveBeenCalledWith('hello world!')
+  })
+
+  test('hello jane', async () => {
+    const spy = jest.spyOn(command, 'log').mockReturnValue(true)
+
+    command.argv = ['jane']
+    await expect(command.run()).resolves.not.toThrow()
+    expect(spy).toHaveBeenCalledWith('hello jane!')
   })
 })
