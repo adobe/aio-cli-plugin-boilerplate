@@ -10,15 +10,16 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const aioLogger = require('@adobe/aio-lib-core-logging')('PLUGINNAME', { provider: 'debug' })
-const { Command, Flags, ux } = require('@oclif/core')
+import Logger from '@adobe/aio-lib-core-logging'
+import { Command, Flags, ux } from '@oclif/core'
 
-class IndexCommand extends Command {
+const aioLogger = Logger('PLUGINNAME', { provider: 'debug' })
+export class IndexCommand extends Command {
   async run () {
     // const { args, flags } = await this.parse(IndexCommand)
     aioLogger.debug('this is the index command.')
 
-    ux.log('hello world')
+    this.log('hello world')
     ux.action.start('doing things')
     ux.action.stop()
   }
@@ -28,11 +29,7 @@ IndexCommand.flags = {
   someflag: Flags.string({ char: 'f', description: 'this is some flag' })
 }
 
-// this is set in package.json, see https://github.com/oclif/oclif/issues/120
-// if not set it will get the first (alphabetical) topic's help description
 IndexCommand.description = 'Your description here'
 IndexCommand.examples = [
   '$ aio PLUGINNAME:some_command'
 ]
-
-module.exports = IndexCommand

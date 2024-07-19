@@ -9,8 +9,7 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-const IndexCommand = require('../../../src/commands/PLUGINNAME')
+import { IndexCommand } from '../../../src/commands/PLUGINNAME'
 
 test('exports', async () => {
   expect(typeof IndexCommand).toEqual('function')
