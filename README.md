@@ -37,6 +37,7 @@ Basic working repo structure for Adobe teams to use as a starting point for thei
 `PLUGINNAME` commands for the Adobe I/O CLI
 
 <!-- toc -->
+* [aio-cli-plugin-boilerplate](#aio-cli-plugin-boilerplate)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -52,7 +53,62 @@ $ aio PLUGINNAME --help
 
 # Commands
 <!-- commands -->
+* [`aio help [COMMAND]`](#aio-help-command)
+* [`aio PLUGINNAME`](#aio-pluginname)
+* [`aio PLUGINNAME hello [NAME]`](#aio-pluginname-hello-name)
 
+## `aio help [COMMAND]`
+
+Display help for aio.
+
+```
+USAGE
+  $ aio help [COMMAND...] [-n]
+
+ARGUMENTS
+  COMMAND...  Command to show help for.
+
+FLAGS
+  -n, --nested-commands  Include all nested commands in the output.
+
+DESCRIPTION
+  Display help for aio.
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.6/src/commands/help.ts)_
+
+## `aio PLUGINNAME`
+
+Your description here
+
+```
+USAGE
+  $ aio PLUGINNAME
+
+DESCRIPTION
+  Your description here
+```
+
+## `aio PLUGINNAME hello [NAME]`
+
+A hello world sample command.
+
+```
+USAGE
+  $ aio PLUGINNAME hello [NAME] [-f <value>]
+
+ARGUMENTS
+  NAME  name to print
+
+FLAGS
+  -f, --someflag=<value>  this is some flag
+
+DESCRIPTION
+  A hello world sample command.
+
+EXAMPLES
+  $ aio PLUGINNAME:hello myself -f myflag
+```
 <!-- commandsstop -->
 
 ## Contributing

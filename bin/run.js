@@ -2,7 +2,7 @@
 /* eslint-disable node/shebang */
 
 /*
-Copyright 2022 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -12,18 +12,5 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const oclif = require('@oclif/core')
-
-const path = require('path')
-const project = path.join(__dirname, '..', 'tsconfig.json')
-
-// In dev mode -> use ts-node and dev plugins
-process.env.NODE_ENV = 'development'
-
-require('ts-node').register({ project })
-
-// In dev mode, always show stack traces
-oclif.settings.debug = true
-
-// Start the CLI
-oclif.run().then(oclif.flush).catch(oclif.Errors.handle)
+import {execute} from '@oclif/core'
+await execute({dir: import.meta.url})

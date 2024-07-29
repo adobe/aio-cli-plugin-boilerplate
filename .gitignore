@@ -1,9 +1,8 @@
 *-debug.log
 *-error.log
-.oclif.manifest.json
+oclif.manifest.json
 /.nyc_output
 /dist
-/lib
 /tmp
 /yarn.lock
 node_modules
@@ -12,3 +11,4 @@ node_modules
 coverage/
 junit.xml
 package-lock.json
+.env

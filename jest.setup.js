@@ -9,8 +9,8 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-const { stdout, stderr } = require('stdout-stderr')
+import { stdout, stderr } from 'stdout-stderr'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
